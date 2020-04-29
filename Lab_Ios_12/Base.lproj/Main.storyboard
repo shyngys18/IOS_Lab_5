@@ -50,7 +50,17 @@
                             <outlet property="delegate" destination="tLy-De-hLG" id="UHT-IE-3lO"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="zGH-uV-EmV"/>
+                    <navigationItem key="navigationItem" id="zGH-uV-EmV">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U74-ju-HiG">
+                            <rect key="frame" x="174.5" y="7" width="65" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Music list"/>
+                            <connections>
+                                <action selector="music_list:" destination="tLy-De-hLG" eventType="touchUpInside" id="eRZ-4V-djw"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geG-fX-o6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,7 +69,7 @@
         <!--Add Music View Controller-->
         <scene sceneID="N9J-xt-Ayu">
             <objects>
-                <viewController storyboardIdentifier="AddMusicVIewController" id="mdI-Tk-7pE" customClass="AddMusicViewController" customModule="Lab_Ios_12" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddMusicViewController" id="mdI-Tk-7pE" customClass="AddMusicViewController" customModule="Lab_Ios_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mco-oE-xoa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,10 +84,10 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Gru-OQ-xQD" style="IBUITableViewCellStyleDefault" id="FMn-hX-Jkm" customClass="AddMusicTableViewCell" customModule="Lab_Ios_12" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="track" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Gru-OQ-xQD" style="IBUITableViewCellStyleDefault" id="FMn-hX-Jkm" customClass="TrackTableViewCell" customModule="Lab_Ios_12" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FMn-hX-Jkm" id="BuH-e1-Lle">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FMn-hX-Jkm" id="BuH-e1-Lle" customClass="TrackTableViewCell" customModule="Lab_Ios_12" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -92,12 +102,14 @@
                                                     <rect key="frame" x="173" y="7" width="68" height="37"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="play:" destination="FMn-hX-Jkm" eventType="touchUpInside" id="e8i-S3-MzQ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="button_label" destination="Phj-T6-3Jp" id="eEI-fA-RGU"/>
-                                            <outlet property="title_text" destination="Gru-OQ-xQD" id="kpt-pb-5K9"/>
+                                            <outlet property="nameLabel" destination="Gru-OQ-xQD" id="GFw-3f-ofW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -106,43 +118,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dV9-dw-LPH"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="PPP-hH-TYU" id="X1n-hG-yFj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Qd-gj-NpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2018.840579710145" y="297.32142857142856"/>
-        </scene>
-        <!--Track Play View Controller-->
-        <scene sceneID="TYr-rW-eja">
-            <objects>
-                <viewController storyboardIdentifier="PlayerViewController" id="8qV-rU-tj2" customClass="TrackPlayViewController" customModule="Lab_Ios_12" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JL0-lz-fmd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hv-6c-AW0">
-                                <rect key="frame" x="59" y="382" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play"/>
-                                <connections>
-                                    <action selector="play:" destination="8qV-rU-tj2" eventType="touchUpInside" id="qR1-dd-Q9c"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bh-CJ-O8M">
-                                <rect key="frame" x="289" y="382" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stop:" destination="8qV-rU-tj2" eventType="touchUpInside" id="lzT-ca-fvv"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="wjl-tm-TtW"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K9o-D1-DYW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4217" y="306"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1WL-A3-0Yi">

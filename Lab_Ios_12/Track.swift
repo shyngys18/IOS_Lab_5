@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class Track: Codable {
+    var previewUrl: URL
+    var artistName: String
+    var trackName: String
+}

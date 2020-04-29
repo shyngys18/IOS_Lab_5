@@ -22,6 +22,15 @@ class ViewController: UICollectionViewController{
     
     
     
+    @IBAction func music_list(_ sender: UIButton) {
+        
+         let yourViewController = AddMusicViewController()
+       
+         present(yourViewController, animated: true)
+      
+       
+        
+    }
     override func viewDidLoad() {
         let path2 = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path2)
@@ -92,11 +101,15 @@ class ViewController: UICollectionViewController{
             let dataPath = self.URL.appendingPathComponent(textField.text ?? "")
             do {
                 try FileManager.default.createDirectory(atPath: dataPath.path, withIntermediateDirectories: false, attributes: nil)
+ 
                 self.reloadFiles(url: self.URL)
+            
             } catch {
                 print(error.localizedDescription)
             }
         }))
+ 
+ 
         
         self.present(alert, animated: true, completion: nil)
         

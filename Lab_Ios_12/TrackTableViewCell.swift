@@ -1,24 +1,43 @@
 //
 //  TrackTableViewCell.swift
-//  Lab_Ios_12
+//  MusicDownloader
 //
-//  Created by Шынгыс on 4/29/20.
-//  Copyright © 2020 Шынгыс. All rights reserved.
+//  Created by erumaru on 4/18/20.
+//  Copyright © 2020 kbtu. All rights reserved.
 //
 
 import UIKit
 
-class TrackTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+protocol TrackTableViewCellDelegate: class {
+    func didPressPlay(track: Track)
+   
 }
+
+class TrackTableViewCell: UITableViewCell {
+    // MARK: - Outlets
+   
+    @IBOutlet var nameLabel: UILabel!
+    
+    // MARK: - Variables
+    var track: Track! {
+        didSet {
+            self.nameLabel.text = track.trackName
+           
+            
+           
+            
+            
+        }
+    }
+    weak var delegate: TrackTableViewCellDelegate?
+    
+    // MARK: - Actions
+   
+    
+    
+    @IBAction func play(_ sender: UIButton) {
+        delegate?.didPressPlay(track: track)
+    }
+   
+    }
+

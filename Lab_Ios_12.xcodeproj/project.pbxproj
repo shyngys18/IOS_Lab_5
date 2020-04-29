@@ -15,6 +15,10 @@
 		C0589E242455F6B2005E4493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0589E222455F6B2005E4493 /* LaunchScreen.storyboard */; };
 		C0589E2C2455F7AD005E4493 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0589E2B2455F7AD005E4493 /* CollectionViewCell.swift */; };
 		C0589E2F2455F8BF005E4493 /* nssl.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C0589E2E2455F8BF005E4493 /* nssl.jpeg */; };
+		C0A146F12459D0380052B8DA /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A146F02459D0380052B8DA /* Track.swift */; };
+		C0A146F32459DE640052B8DA /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A146F22459DE640052B8DA /* MusicService.swift */; };
+		C0A146F52459DF5E0052B8DA /* AddMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A146F42459DF5E0052B8DA /* AddMusicViewController.swift */; };
+		C0A146FD2459E4B30052B8DA /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A146FC2459E4B30052B8DA /* TrackTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		C0589E252455F6B2005E4493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0589E2B2455F7AD005E4493 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C0589E2E2455F8BF005E4493 /* nssl.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl.jpeg; sourceTree = "<group>"; };
+		C0A146F02459D0380052B8DA /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		C0A146F22459DE640052B8DA /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		C0A146F42459DF5E0052B8DA /* AddMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMusicViewController.swift; sourceTree = "<group>"; };
+		C0A146FC2459E4B30052B8DA /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,10 @@
 				C0589E252455F6B2005E4493 /* Info.plist */,
 				C0589E2B2455F7AD005E4493 /* CollectionViewCell.swift */,
 				C0589E2D2455F8BF005E4493 /* Content */,
+				C0A146F02459D0380052B8DA /* Track.swift */,
+				C0A146F22459DE640052B8DA /* MusicService.swift */,
+				C0A146F42459DF5E0052B8DA /* AddMusicViewController.swift */,
+				C0A146FC2459E4B30052B8DA /* TrackTableViewCell.swift */,
 			);
 			path = Lab_Ios_12;
 			sourceTree = "<group>";
@@ -157,6 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0589E1C2455F6B1005E4493 /* ViewController.swift in Sources */,
+				C0A146F52459DF5E0052B8DA /* AddMusicViewController.swift in Sources */,
+				C0A146F32459DE640052B8DA /* MusicService.swift in Sources */,
+				C0A146FD2459E4B30052B8DA /* TrackTableViewCell.swift in Sources */,
+				C0A146F12459D0380052B8DA /* Track.swift in Sources */,
 				C0589E182455F6B1005E4493 /* AppDelegate.swift in Sources */,
 				C0589E2C2455F7AD005E4493 /* CollectionViewCell.swift in Sources */,
 				C0589E1A2455F6B1005E4493 /* SceneDelegate.swift in Sources */,
